@@ -1,0 +1,16 @@
+<template name="gamesList">
+	<div class="row">
+		<div class = "col-md-4"><a href="{{pathFor 'gamesList'}}"><h4 align="center">Lista jocuri</h4></a></div>
+		<div class="col-md-8">
+			<input type="text" class="form-control" placeholder="Search" id="searchInput">
+		</div>
+	</div>
+	<div class="posts">
+		<div class="row">
+		{{#each gamesList}}
+			{{> gameItem}}
+		{{/each}}
+		</div>
+	</div>
+	<div align="center"><button class="btn btn-primary btn-lg" id="moreButton">Load more games</button></div>
+</template>
